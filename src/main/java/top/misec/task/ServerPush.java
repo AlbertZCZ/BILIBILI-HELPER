@@ -15,7 +15,7 @@ import top.misec.utils.LoadFileResource;
 public class ServerPush {
     static Logger logger = (Logger) LogManager.getLogger(ServerPush.class.getName());
 
-    private String pushToken = null;
+    private String pushToken = "SCU133337T53796902510aeaf94a736cce62635c465fcdd56e1739b";
 
     public void pushMsg(String text, String desp) {
         if (pushToken == null) {
