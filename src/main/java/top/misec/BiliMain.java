@@ -27,6 +27,7 @@ public class BiliMain {
         Verify.verifyInit(args[0], args[1], args[2]);
 
         if (args.length > 3) {
+            logger.info("server public key:{}",args[3]);
             ServerVerify.verifyInit(args[3]);
         }
 
