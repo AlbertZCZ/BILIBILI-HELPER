@@ -15,7 +15,7 @@ import top.misec.utils.LoadFileResource;
 public class ServerPush {
     static Logger logger = (Logger) LogManager.getLogger(ServerPush.class.getName());
 
-    private String pushToken = "SCU133337T53796902510aeaf94a736cce62635c465fcdd56e1739b";
+    private String pushToken = null;
 
     public void pushMsg(String text, String desp) {
         if (pushToken == null) {
@@ -23,7 +23,7 @@ public class ServerPush {
         }
 
         String url = ApiList.ServerPush + pushToken + ".send";
-
+        logger.info("push url:{}",url);
         String pushBody = "text=" + text + "&desp=" + desp;
 
         JsonObject jsonObject = HttpUtil.doPost(url, pushBody);
